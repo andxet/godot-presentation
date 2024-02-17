@@ -8,9 +8,15 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@katzumi/slidev-addon-qrcode": "^0.0.13",
     "@slidev/cli": "^0.48.0-beta.2",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.4.19"
+  },
+  "slidev": {
+    "addons": [
+      "@katzumi/slidev-addon-qrcode"
+    ]
   }
 }
