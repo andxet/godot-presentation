@@ -402,7 +402,7 @@ Utile per ottenere un riferimento ad un nodo della scena (Attenzione!! Se si usa
 
 ---
 
-## Consiglio
+## Drag&drop di nodi su script
 
 Possiamo generare le righe @onready con il drag&drop: rilasciando verrà inserito il path:
 
