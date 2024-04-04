@@ -1,8 +1,6 @@
 ---
 theme: smile
 author: Andrea Peretti
-addons:
-  - "@katzumi/slidev-addon-qrcode"
 highlighter: shiki
 info: |
   ## Introduzione a godot
