@@ -165,7 +165,7 @@ layout: two-cols-with-title
 
 ::left::
 
-![nodi di godot](images/node_hierarchy.jpg)
+![nodi di godot](/images/node_hierarchy.jpg)
 
 ::right::
 
