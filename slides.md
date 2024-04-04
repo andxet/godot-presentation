@@ -12,11 +12,10 @@ title: Introduzione a Godot
 mdc: true
 
 layout: image
-image: /images/godot-splash.jpg
 hideInToc: true
 ---
 
-# Creare videogames con
+![godot splash](/images/godot-splash.jpg)
 
 ---
 layout: intro
@@ -487,9 +486,9 @@ Lo scopo del gioco è recuperare l'**idolo dorato** e scappare.
 
 ---
 layout: image
-image: /images/san-martino-quest.jpg
 ---
 
+![san-martino-quest](/images/san-martino-quest.jpg)
 
 ---
 
