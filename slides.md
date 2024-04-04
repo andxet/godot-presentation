@@ -1,5 +1,5 @@
 ---
-theme: default
+theme: smile
 author: Andrea Peretti
 addons:
   - "@katzumi/slidev-addon-qrcode"
@@ -9,95 +9,89 @@ info: |
 
   Presentazione realizzata per il Python Biella Group
   Evento del 1 Marzo 2024
-transition: slide-left
+transition: fade
 title: Introduzione a Godot
 mdc: true
----
 
-# Introduzione a Godot
-
-<QRCode
-  value="https://github.com/k2tzumi/slidev-addon-qrcode"
-  width="180"
-  height="180"
-  color="4329B9"
-  image="/images/godot-splash.jpg"
-/>
-
----
 layout: image
 image: /images/godot-splash.jpg
+hideInToc: true
 ---
 
+# Creare videogames con
+
 ---
-layout: center
+layout: intro
 class: text-center
+hideInToc: true
 --- 
 
 # Speaker
 
-![avatar](https://gravatar.com/avatar/949d43f2535cfbedf72b98d8650073b87ae61df611bb513d8491cee590830dcb?&s=250) { style="border-radius: 50%; display: inline;" }
+![avatar](https://gravatar.com/avatar/949d43f2535cfbedf72b98d8650073b87ae61df611bb513d8491cee590830dcb?&s=250) { style="border-radius: 50%; display: inline; width: 150px;" }
 
-## Andrea Peretti
+### Andrea Peretti
 
 Gameplay Programmer @ Ubisoft Milan
 
 [www.andxet.dev](https://www.andxet.dev)
 
-<QRCode
-  value="https://www.andxet.dev"
-  width="180"
-  height="180"
-/>
+---
+layout: statement
+---
+
+## Game Engines
+
+> Un game engine è un framework creato principalmente per lo sviluppo di videogames, e solitamente include librerie e programmi di supporto come un editor di livelli.
+
+-- Wikipedia
+
+---
+
+## Game Engines
+
+I game engines più famosi mettono a disposizione dello sviluppatore:
+
+- Rendering Engine (2D e/o 3D)
+- Physics engine e collision detection
+- Audio engine
+- Animation engine
+- Scripting
+- Networking
+- Gestione asset (immagini, mesh, clip audio...)
+- Editor di livelli
+- ...
 
 ---
 layout: center
 class: text-center
 ---
 
-# Godot Game Engine
+## Godot Game Engine
 
 ![godot logo](/images/godot-logo.png){ width=200px; style="display: inline;" }
 
 [https://godotengine.org/](https://godotengine.org/)
 
-
 ---
 
-# Game Engines
+## Storia di Godot
 
-Un game engine è un framework creato principalmente per lo sviluppo di videogames, e solitamente include librerie e programmi di supporto come un editor di livelli.---
-
----
-
-# Game Engines
-
-I game engines più famosi mettono a disposizione dello sviluppatore:
-
-- Rendering Engine (2D e/o 3D)
-- Physics engine e collision detection
-- Sounds
-- Animations
-- Scripting
-- networking
-- Asset management
-- ...
-
----
-
-# Storia di Godot
-
-Lo sviluppo è iniziato nel 2001 in **Codenix**, azienda di consulenza di game development in Argentina, con il nome di **Larvotor**.
+Lo sviluppo è iniziato nel 2001 dagli sviluppatori  **Linietsky** e **Verschelde** in **Codenix**, azienda di consulenza di game development in Argentina, con il nome di **Larvotor**.
 
 Nel corso dei successivi 10 anni l'engine ha cambiato nome più volte, fino a chiamarsi, appunto, **Godot**. 
 
-Il nome si ispira all'opera teatrale **Waiting for Godot** di *Samuel Beckett*, poiché rappresenta il desiderio incessante di aggiungere nuove funzionalità all'engine, che lo avvicinerebbero a un prodotto esaustivo, ma non lo farà mai.
+---
+
+## Storia di Godot
+
+Il nome si ispira all'opera teatrale **Aspettando Godot** di *Samuel Beckett*, poiché rappresenta il desiderio incessante di aggiungere nuove funzionalità all'engine, che lo avvicinerebbero a un prodotto esaustivo, ma non lo farà mai (perchè ci sarà sempre qualcosa che può essere migliorato).
 
 ---
 
-# Storia di Godot
+## Storia di Godot
 
-Il rilascio dell'engine in versione open source avvenne nel 2014 sotto licena MIT.
+Il rilascio dell'engine in versione open source avvenne nel **2014** sotto licenza **MIT**.
 
 Ricevette finanziamenti da Mozilla e Microsoft, venne effettuato un refactoring del codice e venne aggiunto C# ai linguaggi supportati.
 
@@ -105,25 +99,15 @@ Gli sviluppatori, **Linietsky** e **Verschelde** iniziarono a lavorare full time
 
 ---
 
-# Storia di Godot
+## Storia di Godot
 
-Nel 2019 si iniziò a lavorare alla versione 4.0, che richiese un ulteriore refactoring. Venne rilasciata nel 2023 migliorando molto l'engine.
+Nel 2019 si iniziò a lavorare alla versione 4.0 che comportò un grande refactoring, venne poi rilasciata nel 2023.
 
 Nel settembre 2023, complice una generale insoddisfazione per alcune modifiche ai costi di licenza di **Unity Engine**, Godot ricevette una grande attenzione dagli sviluppatori ed una donazione di 100.000$ da Re-Logic.
 
 ---
 
-# Caratteristiche
-
-- Game engine general purpose
-- Utilizza un albero di nodi per definire scene
-- Parti di questo albero possono essere salvati a loro volta come scene ed essere riutilizzate
-- Ogni nodo può avere uno script (gdscript, C#)
-- I nodi possono emettere segnali, che possono essere collegati a callback (osservator pattern)
-
----
-
-# Caratteristiche
+## Caratteristiche
 
 Godot supporta la creazione di eseguibili per:
 
@@ -136,7 +120,17 @@ Godot supporta la creazione di eseguibili per:
 
 ---
 
-# La documentazione
+## Caratteristiche
+
+- Game engine general purpose
+- Utilizza un albero di nodi per definire scene
+- Parti di questo albero possono essere loro volta delle scene (file .tscn che possono essere riutilizzati)
+- Ogni nodo può avere uno script (gdscript, C#)
+- I nodi possono emettere segnali, che possono essere collegati a callback (osservator pattern)
+
+---
+
+## La documentazione
 
 [https://docs.godotengine.org/en/stable/](https://docs.godotengine.org/en/stable/)
 
@@ -144,33 +138,46 @@ Ottima per imparare non solo come funziona l'engine, ma il gamedev in generale!
 
 ---
 
-# Editor
+## Editor
 
-![editor screen](/images/editor-screen.jpg) { width=700px; }
+![editor screen](/images/editor-screen.jpg) { width=600px; }
 
 ---
+layout: two-cols-with-title
+---
 
-# Nodi
+## Nodi
 
-<div grid="~ cols-2 gap-4">
-<div>
+::left::
 
 ![nodi](/images/nodi.jpg)
 
-</div>
-<div>
+::right::
 
 - L'albero dei nodi di Godot permette di creare **gerarchie di oggetti**
 - Parti dell'albero possono essere **salvati come scene in modo da essere riutilizzati** (ad esempio per nemici, oggetti di gioco, ecc...)
 - Ogni nodo può avere associato uno **script**, uno o più **gruppi**, essere **nascosto**
 - I nodi figli di un nodo sono relativi al loro padre: se il padre è nascosto, lo saranno anche loro. La transform dei nodi figli sono locali a quella del padre
 
-</div>
-</div>
+---
+layout: two-cols-with-title
+---
+
+## Nodi
+
+::left::
+
+![nodi di godot](images/node_hierarchy.jpg)
+
+::right::
+
+- Tutti i nodi estendono la classe `Node`
+- `Node2D` è il tipo base per i giochi 2D, allo stesso modo `Node3D` è il tipo base per i giochi 3D
+- `Control`è il tipo base per gli elementi della *UI*
 
 ---
 
-# Scripting
+## Scripting
 
 Godot supporta ufficialmente:
 
@@ -179,11 +186,12 @@ Godot supporta ufficialmente:
 - (C, C++)
 
 ---
+layout: two-cols-with-title
+---
 
-# GDScript
+## GDScript
 
-<div grid="~ cols-2 gap-4">
-<div>
+::left::
 
 ```python
 # Everything after "#" is a comment.
@@ -210,8 +218,7 @@ var inferred_type := "String"
 
 ```
 
-</div>
-<div>
+::right::
 
 - Imperativo
 - Orientato agli oggetti
@@ -220,13 +227,13 @@ var inferred_type := "String"
 - **Non è Python!** Ma utilizza una sintassi ad indentazione simile.
 - Non usa un **garbage collector** ma un sistema di **reference counting**
 
-</div>
-</div>
-
+---
+layout: two-cols-with-title
 ---
 
-<div grid="~ cols-2 gap-4">
-<div>
+## GDScript
+
+::left::
 
 ```python
 # Functions.
@@ -257,8 +264,8 @@ func some_function(param1, param2, param3):
 
 ```
 
-</div>
-<div>
+::right::
+
 ```python
 # Constants.
 const ANSWER = 42
@@ -285,11 +292,9 @@ func _init():
 	print(lv.a)
 ```
 
-</div>
-</div>
 ---
 
-# Gradually typed
+## Gradually typed
 
 La *tipizzazione graduale* è un type system in cui ad alcune variabili ed espressioni possono essere assegnati tipi e la correttezza della digitazione viene verificata in **fase di compilazione** (che è *tipizzazione statica*) e alcune espressioni possono essere lasciate non tipizzate e eventuali errori di tipo vengono segnalati in **fase di esecuzione** (che è la *digitazione dinamica*).
 
@@ -320,7 +325,7 @@ Sono entrambi validi!
 
 ---
 
-# Overridable functions
+## Overridable functions
 
 L'engine permette di effettuare l'override di alcune funzioni per permettere ai nostri script di gestire la logica di gioco (pattern **IoC**, *Inversion of Control*):
 
@@ -337,21 +342,21 @@ func _process(delta):
 func _physics_process(delta):
 	pass
 
-# Called once for every event.
-func _unhandled_input(event):
-	pass
-
 # Called once for every event before _unhandled_input(), allowing you to
 # consume some events.
 func _input(event):
+	pass
+
+# Called once for every event.
+func _unhandled_input(event):
 	pass
 ```
 
 ---
 
-# Annotazioni
+## Annotazioni
 
-## @export
+### @export
 
 
 <div grid="~ cols-2 gap-4">
@@ -377,9 +382,9 @@ Utile per vedere parametri dello script nell'inspector (simile ai *campi pubblic
 
 ---
 
-# Annotazioni
+## Annotazioni
 
-## @onready
+### @onready
 
 ```python
 @onready var interact_label: Label = $"Control/Interaction label"
@@ -397,16 +402,31 @@ func _ready():
 
 Utile per ottenere un riferimento ad un nodo della scena (Attenzione!! Se si usa lo script in una scena con una composizione diversa, potrebbe non funzionare più!)
 
-Possiamo generare le righe @onready con il drag&drop: rilasciando verrà inserito il path (ad es. `$"Control/Interaction label"`) e premiamo `Ctrl` al rilascio verrà aggiunta anche la dichiarazione della variabile (ad es. `@onready var interact_label: Label = $"Control/Interaction label"`)
-
 ---
 
-# Segnali
+## Consiglio
+
+Possiamo generare le righe @onready con il drag&drop: rilasciando verrà inserito il path:
+
+```python
+$Control/Interaction_label
+```
+
+Se premiamo `Ctrl` al rilascio verrà aggiunta anche la dichiarazione della variabile:
+
+```python
+@onready var interact_label: Label = $Control/Interaction_label
+```
+
+---
+layout: two-cols-with-title
+---
+
+## Segnali
 
 Permettono di disaccoppiare il codice applicando il **pattern observer**. Una serie di oggetti si registrano ad un segnale e vengono avvisati quando viene generato un evento.
 
-<div grid="~ cols-2 gap-4">
-<div>
+::left::
 
 ```python
 signal damaged(damage_amount: int, current_health: int)
@@ -415,17 +435,14 @@ func damage(amount: int) -> void:
 	current_health -= amount
 	damaged.emit(amount, current_health)
 ```
-</div>
-<div>
+
+::right::
 
 ![alt text](/images/signal-example.jpg)
 
-</div>
-</div>
-
 ---
 
-# Segnali
+## Segnali
 
 Possiamo "collegare" un segnale dal pannello Signals. Dovremo scegliere uno script in cui generare la callback:
 
@@ -470,12 +487,18 @@ La demo creata per questa presentazione è stata creata con Godot 4.2.1, ed util
 
 Lo scopo del gioco è recuperare l'**idolo dorato** e scappare.
 
-![alt text](/images/san-martino-quest.jpg)
+---
+layout: image
+image: /images/san-martino-quest.jpg
+---
+
 
 ---
 
 # Domande?
 
+---
+layout: end
 ---
 
 # Grazie!
@@ -484,8 +507,10 @@ Lo scopo del gioco è recuperare l'**idolo dorato** e scappare.
 
 [https://godotengine.org/](https://godotengine.org/)
 
-[San Martino's quest: https://github.com/andxet/san-martino-quest](https://github.com/andxet/san-martino-quest)
+San Martino's quest:<br/>
+[https://github.com/andxet/san-martino-quest](https://github.com/andxet/san-martino-quest)
 
-[Slide dell`evento: https://andxet.github.io/godot-presentation/](https://andxet.github.io/godot-presentation/)
+Slide dell`evento:<br/>
+[https://andxet.github.io/godot-presentation/](https://andxet.github.io/godot-presentation/)
 
 Realizzato con [Slidev](https://sli.dev/)
